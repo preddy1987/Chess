@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gPEG6fRANeFyoFcCcIczcngyzrQfZWuw6h2qS3ZDhSIxKECR15I5+XsbVRYRlh8ddWw0NZBylvMCQxMBaoV3Tw==",
+  "dgSpecHash": "lxL+kBir78ozeeppy1A9fEhMpVfMyxV4CR7H1Fd+b+HNziQYpewkCAyr17nQXL+BUmB4E3hd5abnpt+ud3ctLg==",
   "success": true,
-  "projectFilePath": "C:\\workspace\\GitHub Repos\\Chess\\Chess\\Chess\\Chess.csproj",
+  "projectFilePath": "C:\\workspace\\GitHub Repos\\Chess\\Chess\\Chess\\ChessAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\predd\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\predd\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

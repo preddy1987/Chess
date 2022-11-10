@@ -216,9 +216,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\workspace\\GitHub Repos\\Chess\\Chess\\Chess\\Chess.csproj",
-      "projectName": "Chess",
-      "projectPath": "C:\\workspace\\GitHub Repos\\Chess\\Chess\\Chess\\Chess.csproj",
+      "projectUniqueName": "C:\\workspace\\GitHub Repos\\Chess\\Chess\\Chess\\ChessAPI.csproj",
+      "projectName": "ChessAPI",
+      "projectPath": "C:\\workspace\\GitHub Repos\\Chess\\Chess\\Chess\\ChessAPI.csproj",
       "packagesPath": "C:\\Users\\predd\\.nuget\\packages\\",
       "outputPath": "C:\\workspace\\GitHub Repos\\Chess\\Chess\\Chess\\obj\\",
       "projectStyle": "PackageReference",
