@@ -2,6 +2,7 @@
 import Square from "../components/Shared/Square.vue";
 
 export default {
+  name: "Chessboard",
   components: {
     Square,
   },

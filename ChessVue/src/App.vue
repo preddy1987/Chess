@@ -1,6 +1,4 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import Chessboard from './components/Chessboard.vue'
 import Square from './components/Shared/Square.vue';
 </script>
