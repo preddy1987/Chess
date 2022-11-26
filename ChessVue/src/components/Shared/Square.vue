@@ -1,13 +1,10 @@
 <script>
 export default {
+  name: "Sqaure",
   props: {
     fileName: String,
     squareColor: String
   },
-  // ['fileName','sqaureColor'],
-  // components: {
-  //   Square,
-  // },
   data() {
     return {};
   },
