@@ -281,35 +281,35 @@ export default {
         </tr>
         <tr>
           <th>8</th>
-          <Square v-for="square in EightSquares" :key="square.Id" v-bind:fileName="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
+          <Square v-for="square in EightSquares" :key="square.Id" v-bind:pieceType="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
         </tr>
         <tr>
           <th>7</th>
-          <Square v-for="square in SevenSquares" :key="square.Id" v-bind:fileName="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
+          <Square v-for="square in SevenSquares" :key="square.Id" v-bind:pieceType="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
         </tr>
         <tr>
           <th>6</th>
-          <Square v-for="square in SixSquares" :key="square.Id" v-bind:fileName="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
+          <Square v-for="square in SixSquares" :key="square.Id" v-bind:pieceType="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
         </tr>
         <tr>
           <th>5</th>
-          <Square v-for="square in FiveSquares" :key="square.Id" v-bind:fileName="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
+          <Square v-for="square in FiveSquares" :key="square.Id" v-bind:pieceType="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
         </tr>
         <tr>
           <th>4</th>
-          <Square v-for="square in FourSquares" :key="square.Id" v-bind:fileName="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
+          <Square v-for="square in FourSquares" :key="square.Id" v-bind:pieceType="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
         </tr>
         <tr>
           <th>3</th>
-          <Square v-for="square in ThreeSquares" :key="square.Id" v-bind:fileName="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
+          <Square v-for="square in ThreeSquares" :key="square.Id" v-bind:pieceType="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
         </tr>
         <tr>
           <th>2</th>
-          <Square v-for="square in TwoSquares" :key="square.Id" v-bind:fileName="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
+          <Square v-for="square in TwoSquares" :key="square.Id" v-bind:pieceType="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
         </tr>
         <tr>
           <th>1</th>
-          <Square v-for="square in OneSquares" :key="square.Id" v-bind:fileName="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
+          <Square v-for="square in OneSquares" :key="square.Id" v-bind:pieceType="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
         </tr>
       </tbody>
     </table>

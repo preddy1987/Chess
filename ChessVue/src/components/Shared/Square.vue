@@ -2,22 +2,22 @@
 export default {
   name: "Sqaure",
   props: {
-    fileName: String,
+    pieceType: String,
     squareColor: String
   },
   data() {
     return {};
   },
   computed: {
-    getFileName() {
-      return "../../src/assets/images/" + this.fileName + ".svg";
+    fileName() {
+      return "../../src/assets/images/" + this.pieceType + ".svg";
     }
 
   }
 }
 </script>
 <template>
-  <td :class="squareColor"><img :src="getFileName" alt=""/></td>
+  <td :class="squareColor"><img :src="fileName" alt=""/></td>
  
 </template>
 
