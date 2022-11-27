@@ -1,11 +1,15 @@
 ﻿using ChessAPI.Models;
+using ChessAPI.Services.Interfaces;
+using static ChessAPI.Constants;
+
 namespace ChessAPI.Services
 {
-    public class ChessService
+    public class ChessService : IChessService
     {
-        public Models.Chess CreateNewGame()
+        
+        public Chess CreateNewGame()
         {
-            Models.Chess newgame = new Models.Chess();
+            Chess newgame = new Chess();
             return newgame;
         }
 
@@ -13,8 +17,12 @@ namespace ChessAPI.Services
         {
             var board = new List<Square>();
 
-            List<string> 
+            return board;
 
+        }
+        public List<CoordinatePosition> GetPotentialMovesForPiece(int gameId, int pieceId)
+        {
+            return new List<CoordinatePosition>();
         }
     }
 }
