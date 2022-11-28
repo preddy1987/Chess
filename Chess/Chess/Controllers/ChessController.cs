@@ -16,10 +16,11 @@ namespace ChessAPI.Controllers
             _cs = chessService;
         }
 
-        [HttpGet(Name = "CreateNewGame")]
-        public Models.Chess CreateNewGame()
+        //[HttpGet("{gameId}")]
+        [HttpGet]
+        public async Task<ActionResult<Chess>> GetGameState(int gameId)
         {      
-            return _cs.CreateNewGame();
+            return await _cs.GetGameState(gameId);
         }
     }
 }

@@ -9,6 +9,6 @@ namespace ChessAPI.Models
         public Player Player { get; set; }
         public Constants.Color Color { get; set; }
         public Constants.PieceType PieceType { get; set; }
-        public List<CoordinatePosition> PotentialMoves { get; set; }
+        //public List<CoordinatePosition> PotentialMoves { get; set; }
     }
 }
