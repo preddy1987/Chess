@@ -425,6 +425,14 @@ namespace ChessAPI.Services
                         square.Piece.Color = square.Piece.Player.Color;
                         square.Piece.PieceType = PieceType.Knight;
                         break;
+                    case CoordinatePosition.H1:
+                        square.CoordinatePosition = coordinatePosition;
+                        square.Color = Color.White;
+                        square.Piece = new Piece();
+                        square.Piece.Player = player1;
+                        square.Piece.Color = square.Piece.Player.Color;
+                        square.Piece.PieceType = PieceType.Rook;
+                        break;
                     default:
                         break;
                 }
