@@ -25,6 +25,7 @@ namespace ChessAPI.Services
             newgame.Players.Add(player1);
             newgame.Players.Add(player2);
             newgame.Chessboard = SetupChessBoard(player1, player2);
+            _ctx.ChessGames.Add(newgame);
             _ctx.SaveChanges();
             return newgame;
         }
