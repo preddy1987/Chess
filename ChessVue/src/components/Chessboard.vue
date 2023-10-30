@@ -311,12 +311,28 @@ export default {
           <th>1</th>
           <Square v-for="square in OneSquares" :key="square.Id" v-bind:pieceType="square.Piece != null ? square.Piece.color + square.Piece.PieceType : null" v-bind:squareColor="square.color"/>
         </tr>
+        <tr>
+          <th></th>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+          <th>D</th>
+          <th>E</th>
+          <th>F</th>
+          <th>G</th>
+          <th>H</th>
+        </tr>
       </tbody>
     </table>
   </div>
 </template>
 
 <style scoped>
+
+tr {
+  color: #000;
+}
+
 .chess-board-container {
   padding-top: 3vh;
   display: flex;

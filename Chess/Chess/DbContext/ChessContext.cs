@@ -9,10 +9,18 @@ namespace ChessAPI
         {
 
         }
-        public DbSet<Square> Squares { get; set; }
+        //public DbSet<Square> Squares { get; set; }
+        public DbSet<ChessBoard> ChessBoards { get; set; }
         public DbSet<Piece> Pieces { get; set; }
         public DbSet<Player> Players { get; set; }
         public DbSet<Chess> ChessGames { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Some database configuration
+            modelBuilder.Entity<ChessBoard>()
+                  .Ignore(i => i.Grid);
+        }
     }
 
 }
