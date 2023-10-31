@@ -4,6 +4,7 @@ using ChessAPI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChessAPI.Migrations
 {
     [DbContext(typeof(ChessContext))]
-    partial class ChessContextModelSnapshot : ModelSnapshot
+    [Migration("20231031022016_InitialCreate6")]
+    partial class InitialCreate6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,15 +141,13 @@ namespace ChessAPI.Migrations
                     b.Property<bool>("Occupied")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("PieceId")
+                    b.Property<int>("PieceId")
                         .HasColumnType("int");
 
                     b.Property<int>("RowNumber")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ChessBoardId");
 
                     b.HasIndex("PieceId");
 
@@ -185,17 +185,11 @@ namespace ChessAPI.Migrations
 
             modelBuilder.Entity("ChessAPI.Models.Square", b =>
                 {
-                    b.HasOne("ChessAPI.Models.ChessBoard", "ChessBoard")
-                        .WithMany("Squares")
-                        .HasForeignKey("ChessBoardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ChessAPI.Models.Piece", "Piece")
                         .WithMany()
-                        .HasForeignKey("PieceId");
-
-                    b.Navigation("ChessBoard");
+                        .HasForeignKey("PieceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Piece");
                 });
@@ -203,11 +197,6 @@ namespace ChessAPI.Migrations
             modelBuilder.Entity("ChessAPI.Models.Chess", b =>
                 {
                     b.Navigation("Players");
-                });
-
-            modelBuilder.Entity("ChessAPI.Models.ChessBoard", b =>
-                {
-                    b.Navigation("Squares");
                 });
 #pragma warning restore 612, 618
         }

@@ -4,6 +4,7 @@ using ChessAPI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChessAPI.Migrations
 {
     [DbContext(typeof(ChessContext))]
-    partial class ChessContextModelSnapshot : ModelSnapshot
+    [Migration("20231031022844_InitialCreate7")]
+    partial class InitialCreate7
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,7 +141,7 @@ namespace ChessAPI.Migrations
                     b.Property<bool>("Occupied")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("PieceId")
+                    b.Property<int>("PieceId")
                         .HasColumnType("int");
 
                     b.Property<int>("RowNumber")
@@ -185,7 +187,7 @@ namespace ChessAPI.Migrations
 
             modelBuilder.Entity("ChessAPI.Models.Square", b =>
                 {
-                    b.HasOne("ChessAPI.Models.ChessBoard", "ChessBoard")
+                    b.HasOne("ChessAPI.Models.ChessBoard", null)
                         .WithMany("Squares")
                         .HasForeignKey("ChessBoardId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -193,9 +195,9 @@ namespace ChessAPI.Migrations
 
                     b.HasOne("ChessAPI.Models.Piece", "Piece")
                         .WithMany()
-                        .HasForeignKey("PieceId");
-
-                    b.Navigation("ChessBoard");
+                        .HasForeignKey("PieceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Piece");
                 });

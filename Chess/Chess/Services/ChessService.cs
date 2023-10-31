@@ -44,6 +44,7 @@ namespace ChessAPI.Services
         private ChessBoard SetupChessBoard(Player player1, Player player2)
         {
             var board = new ChessBoard(8);
+            board.GenerateBoardGrid();
             return board;
         }
 

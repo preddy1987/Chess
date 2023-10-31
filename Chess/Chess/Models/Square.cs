@@ -5,12 +5,14 @@ namespace ChessAPI.Models
     public class Square
     {
         public int Id { get; set; }
-        public CoordinatePosition CoordinatePosition { get; set; }
+        //public CoordinatePosition CoordinatePosition { get; set; }
         public int RowNumber { get; set; }
         public int ColumnNumber { get; set; }
         public Constants.Color Color { get; set; }
-        public int PieceId { get; set; }
+        public int? PieceId { get; set; }
         public Piece? Piece { get; set; }
+        public int ChessBoardId { get; set; }
+        public ChessBoard? ChessBoard { get; set; }
 
         public bool Occupied { get; set; }
         public bool LegalNextMove { get; set; }
@@ -19,6 +21,9 @@ namespace ChessAPI.Models
         {
             RowNumber = x;
             ColumnNumber = y;
+        }
+        public Square()
+        {
         }
     }
 }
